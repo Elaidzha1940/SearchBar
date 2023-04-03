@@ -1,7 +1,7 @@
 //  /*
 //
 //  Project: SearchBar
-//  File: ContentView.swift
+//  File: SearchBarComponent.swift
 //  Created by: Elaidzha Shchukin
 //  Date: 03.04.2023
 //
@@ -21,10 +21,10 @@ struct SearchBarComponent: View {
         VStack {
             HStack {
                 Image(systemName: "magnifyingglass")
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                 
                 TextField("Поиск", text: $SearchText)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.black)
                 
             }
             .frame(height: 4)
@@ -35,6 +35,7 @@ struct SearchBarComponent: View {
                     .fill(Color.white)
             )
         }
+        .back
     }
 }
 
