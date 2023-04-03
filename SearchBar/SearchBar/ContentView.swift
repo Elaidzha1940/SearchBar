@@ -32,7 +32,7 @@ struct SearchBarComponent: View {
             .padding()
             .background(
                 RoundedRectangle(cornerRadius: 13)
-                    .fill(Color.elements(.greySearch))
+                    .fill(Color.white)
             )
         }
     }
@@ -40,8 +40,6 @@ struct SearchBarComponent: View {
 
 struct SearchBarComponent_Previews: PreviewProvider {
     static var previews: some View {
-        self.devices{
-            SearchBarComponent()
-        }
+        SearchBarComponent()
     }
 }
