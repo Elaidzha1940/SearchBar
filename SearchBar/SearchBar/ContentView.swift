@@ -18,24 +18,28 @@ struct SearchBarComponent: View {
     @State var SearchText: String = ""
     
     var body: some View {
-        VStack {
-            HStack {
-                Image(systemName: "magnifyingglass")
-                    .foregroundColor(.black)
+        ZStack {
+            Color.brown
+            VStack {
                 
-                TextField("Поиск", text: $SearchText)
-                    .foregroundColor(.black)
-                
+                HStack {
+                    Image(systemName: "magnifyingglass")
+                        .foregroundColor(.black)
+                    
+                    TextField("Поиск", text: $SearchText)
+                        .foregroundColor(.black)
+                    
+                }
+                .frame(height: 4)
+                .font(.title3)
+                .padding()
+                .background(
+                    RoundedRectangle(cornerRadius: 13)
+                        .fill(Color.white)
+                )
             }
-            .frame(height: 4)
-            .font(.title3)
-            .padding()
-            .background(
-                RoundedRectangle(cornerRadius: 13)
-                    .fill(Color.white)
-            )
         }
-        .back
+        .ignoresSafeArea()
     }
 }
 
